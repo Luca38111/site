@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Crea
+{% endblock title %}
+
+{% block componets %}
+<div class="container">
+
+      <form method="post" class="m-5">
+        <div class="mb-3">
+          <label for="tutolo" class="form-label">Titolo</label>
+          <input type="text" name="titolo" placeholder="Inserisci un titolo" class="form-control" value="{{ request.form['titolo'] }}" required>
+        </div>
+        <div class="mb-3">
+          <label for="info" class="form-label">Info</label>
+          <textarea name="info" placeholder="Inserisci delle infomazzioni" class="form-control">{{ request.form['info'] }}</textarea>
+        </div>
+        <br>
+     
+        <div class="form-grup">
+          <button type="submit" class="btn btn-outline-info">Crea post</button>
+        </div>
+        
+      </form>
+
+
+  
+</div>
+{% endblock componets %}
